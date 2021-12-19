@@ -134,11 +134,9 @@ function optionSelected(answer){
     if(userAns == correctAns){
         answer.classList.add("correct");
         console.log("correct Answer");
-        console.log("Your correct answers = " + userScore);
     }else {
         answer.classList.add("incorrect");
         console.log("Wrong Answer");
-
         for(i=0; i < allOptions; i++){
             if(optionList.children[i].textContent == correctAns){ //if there is an option which is matched to an array answer 
                 console.log("Auto selected correct answer.");
