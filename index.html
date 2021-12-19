@@ -13,8 +13,8 @@
     <header>
         <div class="highscore">View high scores</div>
         <div class="timer">
-            <div class="time-left">Time(sec):</div>
-            <div class="timer">60</div>
+            <div class="time-text">Time(sec):</div>
+            <div class="timer-sec">60</div>
         </div>
     </header>
 
@@ -34,39 +34,44 @@
             <div class="que-text">
                 <!--Questions inserted from JavaScript-->
             </div>
-            <div class="option-text">
+            <div class="option-list">
                 <!--Options inserted from JavaScript-->
             </div>
 
-            <footer class="respnse-result">
+            <footer class="response-result">
                 <!--Inserted from JavaScript-->
             </footer>
         </section>
 
-
-        <section class="Result">
+        
+        <section id="result-id" class="result">
             <h1 id="result-title">All done!</h1>
-            <p>your final score is</p>
-            <div>
+            <p id="tag">your final score is</p>
+            <div class="submitForm">
                 <p>Enter Initial: </p>
                 <input type="text" name="name-inital" placeholder="Enter your Initals"/>
+                <button class="btn" type="submit">Submit</button>
+                
             </div>
         </section>
 
-        <section class="high-scores">
+        <section id="hs-id" class="high-scores">
             <h1>High scores</h1>
-            <div>
+            <div id="hs-txt"> 
                 <!--Inserted from JavaScript-->
+                
             </div>
-            <button class="start go-back">Go Back</button>
-            <button class="clear-hs">Clear high scores</button>
-        </section>
+            <div class="buttons">
+                <button class="go-back">Go Back</button>
+                <button class="clear-hs">Clear high scores</button>
+            </div>
+        </section>     
 
 
 
 
             
-            
+
         
     </main>
 
