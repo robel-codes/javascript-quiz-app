@@ -173,6 +173,33 @@ section .option-list .option{
     justify-content: space-between;
 }
 
+section .option-list .option.correct{
+    color: #155724;
+    background: #d4edda;
+    border: 1px solid #c3e6cb;
+}
+
+section .option-list .option.incorrect{
+    color: #721c24;
+    background: #f8d7da;
+    border: 1px solid #f5c6cb;
+}
+
+section .hs-txt ol{
+    background: aliceblue;
+    border: 1px solid #6670aa;
+    border-radius: 5px;
+    padding: 8px 15px;
+    font-size: 17px;
+    margin-bottom: 15px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
 footer{
     height: 60px;
     padding: 0 30px;
@@ -226,16 +253,3 @@ footer .response-result{
     transition: all 0.3s ease;
 }
 
-section .hs-txt ol{
-    background: aliceblue;
-    border: 1px solid #6670aa;
-    border-radius: 5px;
-    padding: 8px 15px;
-    font-size: 17px;
-    margin-bottom: 15px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}

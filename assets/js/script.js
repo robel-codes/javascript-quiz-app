@@ -111,6 +111,7 @@ function showQuestions(index) {
     // set onclick attribut to all available options
     for (i=0; i<option.length; i++){
         option[i].setAttribute("onclick", "optionSelected(this)");
+        
         index++;
         option[i].onclick = () =>{
             if (queCount < questions.length - 1){
@@ -126,6 +127,7 @@ function showQuestions(index) {
 }
 
 
+// function to validate the selected choices
 function optionSelected(answer){
     var userAns = answer.textContent;
     var correctAns = questions[queCount].answer;
@@ -146,7 +148,7 @@ function optionSelected(answer){
     
 }
 
-
+// count down function
 function startTimer(time){
     counter = setInterval(timer, 1000);
     function timer(){
@@ -155,10 +157,11 @@ function startTimer(time){
         if(time < 0){
             clearInterval(counter);
             showResult();
-        }   
+        } 
     }
 }
 
+//function to display the Result page
 function showResult(){
     quizIntro.classList.add("passiveInfo");
     quizMain.classList.remove("activeQuiz");
@@ -168,6 +171,7 @@ function showResult(){
     tag.innerHTML = resultTag;
 }
 
+// fuction to show the high score page
 function showHighScore(){
     quizIntro.classList.add("passiveInfo");
     quizMain.classList.remove("activeQuiz");
@@ -185,6 +189,7 @@ viewHs.onclick = ()=>{
 
 var inialBtn = document.querySelector(".submitForm .btn");
 
+// Submit inital to high score board
 inialBtn.onclick = ()=>{
     var nameInital = document.querySelector("input[name='name-inital']").value;
 
@@ -199,7 +204,7 @@ inialBtn.onclick = ()=>{
 
     var scoreInfoEl = document.getElementById("hs-txt");
 
-    var listItemEl = document.createElement("ol");
+    var listItemEl = document.createElement("li");
     listItemEl.className = "names-item";
     listItemEl.innerHTML = nameInital + ":" +timeCount.textContent  ;
 
@@ -209,6 +214,7 @@ inialBtn.onclick = ()=>{
 
 var backBtn = document.querySelector(".buttons .go-back");
 
+// go back to the main page
 backBtn.onclick = ()=>{
     quizIntro.classList.remove("passiveInfo");
     quizMain.classList.remove("activeQuiz");
@@ -219,6 +225,7 @@ backBtn.onclick = ()=>{
 
 var clearBtn = document.querySelector(".buttons .clear-hs");
 
+// clear the high score list 
 clearBtn.onclick = ()=>{
     document.getElementById("hs-txt").innerHTML = "";
     clearInterval(counter);
